@@ -1,5 +1,5 @@
 const express = require('express');
-const cats = require('../store');
+const { cats } = require('../store');
 
 const catRouter = express.Router();
 
