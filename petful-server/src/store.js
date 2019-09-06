@@ -33,8 +33,6 @@ class Queue {
   }
 }
 
-
-
 let catQ = new Queue();
 
 catQ.enqueue({
@@ -49,11 +47,29 @@ catQ.enqueue({
 catQ.enqueue({
   imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
   imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-  name: 'Fluffy2',
-  sex: 'Female',
+  name: 'Meeko',
+  sex: 'Male',
   age: 2,
   breed: 'Bengal',
   story: 'Thrown on the street'
+});
+catQ.enqueue({
+  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+  imageDescription: 'Black cat lounging on concrete.',
+  name: 'Momo',
+  sex: 'Male',
+  age: 0.5,
+  breed: 'Bombay',
+  story: 'New born kitten'
+});
+catQ.enqueue({
+  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+  imageDescription: 'Black and grey lounging on concrete.',
+  name: 'Bash',
+  sex: 'Male',
+  age: 4,
+  breed: 'Tabby',
+  story: 'Family moved'
 });
 
 
