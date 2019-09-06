@@ -1,16 +1,17 @@
 const express = require('express');
-const { catQ } = require('../store');
+const { catQ, adoptedAnimalsQ } = require('../store');
 
 const catRouter = express.Router();
 
 catRouter
   .route('/')
   .get((req,res) => {
-    let currentCat = catQ.dequeue();
-    if(currentCat === undefined){
+    let displayCat = catQ.first.value;
+    console.log(displayCat);
+    if(displayCat === undefined){
       res.send('No more cats to be adopted');
     }
-    res.json(currentCat);
+    res.json(displayCat);
   });
 
 module.exports = catRouter;
