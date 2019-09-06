@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const catRouter = require('./cats/catRouter');
 const dogRouter = require('./dogs/dogRouter');
+const userRouter = require('./users/userRouter');
 
 const { NODE_ENV, CLIENT_ORIGIN } = require('./config');
 
@@ -23,7 +24,7 @@ app.use(cors({
 
 app.use('/api/cat', catRouter);
 app.use('/api/dog', dogRouter);
-//app.use()
+app.use('/api/user', userRouter);
 
 
 app.use(function errorHandler(error, req, res, next) { //eslint-disable-line no-unused-vars

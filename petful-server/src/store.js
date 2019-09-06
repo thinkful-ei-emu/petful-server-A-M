@@ -31,6 +31,16 @@ class Queue {
     }
     return node.value;
   }
+
+  length(queue){
+    let count = 0;
+    let node = queue.first;
+    while(node !== null){
+      count++;
+      node = node.next;
+    }
+    return count;
+  }
 }
 
 let catQ = new Queue();
@@ -53,6 +63,9 @@ catQ.enqueue({
   breed: 'Bengal',
   story: 'Thrown on the street'
 });
+
+//console.log(length(catQ));
+
 
 
 let dogQ = new Queue();
