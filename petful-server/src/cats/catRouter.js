@@ -13,4 +13,8 @@ catRouter
     res.json(currentCat);
   });
 
+// catRouter
+//   .route('/adopted')
+//   .get()
+
 module.exports = catRouter;

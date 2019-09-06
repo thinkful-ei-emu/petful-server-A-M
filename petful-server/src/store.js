@@ -31,17 +31,9 @@ class Queue {
     }
     return node.value;
   }
-
-  length(queue){
-    let count = 0;
-    let node = queue.first;
-    while(node !== null){
-      count++;
-      node = node.next;
-    }
-    return count;
-  }
 }
+
+
 
 let catQ = new Queue();
 
@@ -64,9 +56,6 @@ catQ.enqueue({
   story: 'Thrown on the street'
 });
 
-//console.log(length(catQ));
-
-
 
 let dogQ = new Queue();
 dogQ.enqueue({
@@ -80,12 +69,8 @@ dogQ.enqueue({
 });
 
 
-let userQ = new Queue();
-
-
 
 module.exports = { 
   catQ,
   dogQ,
-  userQ
 };
