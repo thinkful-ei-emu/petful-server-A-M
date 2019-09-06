@@ -6,12 +6,15 @@ const dogRouter = express.Router();
 dogRouter
   .route('/')
   .get((req,res) => {
-    let displayDog = dogQ.first.value;
-    console.log(displayDog);
-    if(displayDog === undefined){
-      res.send('No more cats to be adopted');
+
+    if(dogQ.first === null){
+      res.status(404).send('No more dogs to be adopted');
     }
-    res.json(displayDog);
+    else{
+      let displayDog = dogQ.first.value;  
+      res.json(displayDog); 
+    }
+   
   });
 
 module.exports = dogRouter;

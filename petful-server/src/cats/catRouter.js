@@ -6,12 +6,15 @@ const catRouter = express.Router();
 catRouter
   .route('/')
   .get((req,res) => {
-    let displayCat = catQ.first.value;
-    console.log(displayCat);
-    if(displayCat === undefined){
-      res.send('No more cats to be adopted');
+       
+    if(catQ.first ===  null){
+      res.status(404).send('No more cats to be adopted');
     }
-    res.json(displayCat);
+    else{
+      let displayCat = catQ.first.value; 
+      res.json(displayCat);
+    }
+   
   });
 
 module.exports = catRouter;
