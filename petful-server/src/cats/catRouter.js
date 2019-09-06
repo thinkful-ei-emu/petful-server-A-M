@@ -1,12 +1,12 @@
 const express = require('express');
-const { cats } = require('../store');
+const { cats, nextCat } = require('../store');
 
 const catRouter = express.Router();
 
 catRouter
   .route('/')
   .get((req,res) => {
-    res.json(cats);
+    res.json(nextCat);
   });
 
 module.exports = catRouter;
