@@ -1,12 +1,16 @@
 const express = require('express');
-const { dogs } = require('../store');
+const { dogQ } = require('../store');
 
 const dogRouter = express.Router();
 
 dogRouter
   .route('/')
   .get((req,res) => {
-    res.json(dogs);
+    let nextDog = dogQ.dequeue();
+    if(nextDog === undefined){
+      res.send('No more dogs to be adpoted');
+    }
+    res.json(nextDog);
   });
 
 module.exports = dogRouter;
