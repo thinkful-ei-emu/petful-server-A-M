@@ -45,8 +45,8 @@ catQ.enqueue({
   story: 'Thrown on the street'
 });
 catQ.enqueue({
-  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-  imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+  imageURL:'https://www.thehappycatsite.com/wp-content/uploads/2017/09/oil.jpg', 
+  imageDescription: 'Orange bengal cat perched on the fence.',
   name: 'Meeko',
   sex: 'Male',
   age: 2,
@@ -54,17 +54,17 @@ catQ.enqueue({
   story: 'Thrown on the street'
 });
 catQ.enqueue({
-  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-  imageDescription: 'Black cat lounging on concrete.',
+  imageURL:'https://media.mnn.com/assets/images/2018/02/AdorableBlackCatLookingAtCameraFromSofa.jpg.653x0_q80_crop-smart.jpg', 
+  imageDescription: 'Black cat lounging on bed.',
   name: 'Momo',
   sex: 'Male',
   age: 0.5,
   breed: 'Bombay',
-  story: 'New born kitten'
+  story: 'Ready to be adopted'
 });
 catQ.enqueue({
-  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-  imageDescription: 'Black and grey lounging on concrete.',
+  imageURL:'https://kittentoob.com/wp-content/uploads/2018/01/Mackerel-tabby-750x441.jpg', 
+  imageDescription: 'Black and grey getting ready for a cat nap.',
   name: 'Bash',
   sex: 'Male',
   age: 4,
@@ -83,6 +83,26 @@ dogQ.enqueue({
   breed: 'Golden Retriever',
   story: 'Owner Passed away'
 });
+dogQ.enqueue({
+  imageURL: 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/19160330/Havanese-puppy.jpg',
+  imageDescription: 'A smiling brown puppy in a field.',
+  name: 'Havanese',
+  sex: 'Male',
+  age: 3,
+  breed: '',
+  story: 'Owner Passed away'
+});
+dogQ.enqueue({
+  imageURL: 'https://vetstreet-brightspot.s3.amazonaws.com/cf/d50ed0aec211e088ab0050568d634f/file/Chug-2-645km071411.jpg',
+  imageDescription: 'A smiling white coat ready for a walk.',
+  name: 'Cedrik',
+  sex: 'Male',
+  age: 3,
+  breed: 'Chihuahua Pug',
+  story: 'Owner Passed away'
+});
+
+
 
 let adoptedAnimalsQ = new Queue();
 
