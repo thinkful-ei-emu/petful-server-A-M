@@ -84,7 +84,7 @@ dogQ.enqueue({
   story: 'Owner Passed away'
 });
 
-let adoptedAnimalsQ = new Queue();
+let adoptedAnimalsQ = [];
 
 module.exports = { 
   catQ,

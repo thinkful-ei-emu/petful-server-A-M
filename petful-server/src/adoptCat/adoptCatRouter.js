@@ -7,7 +7,7 @@ adoptCatRouter
   .get((req,res) => {
     let currentCat = catQ.dequeue();
     if(currentCat){
-      adoptedAnimalsQ.enqueue(currentCat);
+      adoptedAnimalsQ.push(currentCat);
     }
     
     if(currentCat === undefined){

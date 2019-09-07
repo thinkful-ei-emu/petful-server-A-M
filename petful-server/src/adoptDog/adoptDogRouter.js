@@ -7,7 +7,7 @@ adoptDogRouter
   .get((req,res) => {
     let currentDog = dogQ.dequeue();
     if(currentDog){
-      adoptedAnimalsQ.enqueue(currentDog);
+      adoptedAnimalsQ.push(currentDog);
     }
     
     if(currentDog === undefined){

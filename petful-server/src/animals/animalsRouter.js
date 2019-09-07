@@ -6,7 +6,7 @@ const animalsRouter = express.Router();
 animalsRouter
   .route('/')
   .get((req,res) => {
-    let animals = adoptedAnimalsQ;
+    let animals = adoptedAnimalsQ;   
     return res.json(animals);
   });
 
