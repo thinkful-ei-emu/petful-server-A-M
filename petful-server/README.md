@@ -30,19 +30,31 @@ Each endpoint is setup to respond to GET requests.
 
 To get the first pet in line use: 
   /api/cat
+
+  or 
+
   /api/dog
+
 this will respond with just the pet who is first in line.
 
 To dequeue a pet use:
+
   /api/adopt/cat
+
+  or
+
   /api/adopt/dog
+
 this will respond with the pet you dequeued.
 
 To get a list of all adopted pets use:
+
   /api/animals
+  
 this will respond with an array of all the adpoted pets, dogs and cats together.
 
 All response follows the format below
+
 {
   imageURL:'https://kittentoob.com/wp-content/uploads/2018/01/Mackerel-tabby-750x441.jpg', 
   imageDescription: 'Black and grey getting ready for a cat nap.',
