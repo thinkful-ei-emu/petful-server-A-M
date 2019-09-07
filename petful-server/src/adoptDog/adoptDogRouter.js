@@ -11,7 +11,7 @@ adoptDogRouter
     }
     
     if(currentDog === undefined){
-      res.send('No more cats to be adopted');
+      res.send('No more dogs to be adopted');
     }
     res.json(currentDog);
   });

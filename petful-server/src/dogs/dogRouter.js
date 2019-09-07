@@ -8,7 +8,9 @@ dogRouter
   .get((req,res) => {
 
     if(dogQ.first === null){
-      res.status(404).send('No more dogs to be adopted');
+      res.status(404).send({
+        error: { message: 'There are no more dogs left to adopt' }
+      });
     }
     else{
       let displayDog = dogQ.first.value;  
