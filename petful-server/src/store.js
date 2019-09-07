@@ -104,7 +104,7 @@ dogQ.enqueue({
 
 
 
-let adoptedAnimalsQ = new Queue();
+let adoptedAnimalsQ = [];
 
 module.exports = { 
   catQ,

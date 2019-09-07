@@ -7,11 +7,11 @@ adoptDogRouter
   .get((req,res) => {
     let currentDog = dogQ.dequeue();
     if(currentDog){
-      adoptedAnimalsQ.enqueue(currentDog);
+      adoptedAnimalsQ.push(currentDog);
     }
     
     if(currentDog === undefined){
-      res.send('No more cats to be adopted');
+      res.send('No more dogs to be adopted');
     }
     res.json(currentDog);
   });
