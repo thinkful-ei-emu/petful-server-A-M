@@ -77,7 +77,8 @@ catQ.enqueue({
   story: 'Family moved'
 });
 
-let dogQ = new Queue(); dogQ.enqueue({
+let dogQ = new Queue(); 
+dogQ.enqueue({
   imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute dog listening to music 1_1.jpg',
   imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
   name: 'Zeus',
