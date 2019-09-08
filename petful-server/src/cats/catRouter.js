@@ -11,6 +11,7 @@ catRouter
       res.status(404).send({
         error: { message: 'There are no more cats left to adopt' }
       });
+
     }
     else{
       let displayCat = catQ.first.value; 

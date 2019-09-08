@@ -8,8 +8,7 @@ adoptCatRouter
     let currentCat = catQ.dequeue();
     if(currentCat){
       adoptedAnimalsQ.push(currentCat);
-    }
-    
+    }    
     if(currentCat === undefined){
       res.send('No more cats to be adopted');
     }
