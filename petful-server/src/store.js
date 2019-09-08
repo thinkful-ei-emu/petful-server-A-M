@@ -46,11 +46,7 @@ catQ.enqueue({
 });
 
 catQ.enqueue({
-<<<<<<< HEAD
   imageURL: 'https://www.thehappycatsite.com/wp-content/uploads/2017/09/oil.jpg',
-=======
-  imageURL:'https://www.thehappycatsite.com/wp-content/uploads/2017/09/oil.jpg', 
->>>>>>> ef6431dafb74e8122578061310699bbc00a42eb6
   imageDescription: 'Orange bengal cat perched on the fence.',
   name: 'Meeko',
   sex: 'Male',
