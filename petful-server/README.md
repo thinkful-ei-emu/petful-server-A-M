@@ -1,26 +1,70 @@
-# Express Boilerplate!
+# Petful Server
 
-This is a boilerplate project used for starting new projects!
+Live App: https://am-petful-client.now.sh/
+Server is being hosted using heroku.
 
-## Set up
+Developed by:
+Martha Plantz and Ashley Oellbaum
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+## Summary
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+Petful is an adoption simulator that allows for you to adopt a pet on a "first come, first served" basis. This means that you must wait until you are first in line to adopt a pet. Similarly, the animals are adopted by the order in which they arrive at FIFO. When it is your turn to adopt, you have a choice of adopting a dog, cat or both animals. Due to our "first-in, first-out" policy, only the animals that have been waiting the longest to be adopted are available for adoption.
 
-## Scripts
+## Technologies
+
+Front-end: React, HTML, CSS, Javascript
+Backend: Node.js, Express
+
+This application utilizes queue data structures.
+
+## Server Setup
+
+This server includes 5 different end points:
+/api/cat
+/api/dog
+/api/adopt/cat
+/api/adopt/dog
+/api/animals. 
+
+Each endpoint is setup to respond to GET requests.
+
+To get the first pet in line use: 
+  /api/cat  or   /api/dog
+
+this will respond with just the pet who is first in line.
+
+To dequeue a pet use:
+
+  /api/adopt/cat  or   /api/adopt/dog
+
+this will respond with the pet you dequeued.
+
+To get a list of all adopted pets use:
+
+  /api/animals
+
+this will respond with an array of all the adpoted pets, dogs and cats together.
+
+All response follows the format below
+
+{
+  imageURL:'https://kittentoob.com/wp-content/uploads/2018/01/Mackerel-tabby-750x441.jpg', 
+  imageDescription: 'Black and grey getting ready for a cat nap.',
+  name: 'Bash',
+  sex: 'Male',
+  age: 4,
+  breed: 'Tabby',
+  story: 'Family moved'
+}
+
+When requesting the adopted pets the response will be an array of objects with the same properties as above. 
+
+## Link to Client Repo
+
+https://github.com/thinkful-ei-emu/Ashley-Martha-Petful-Client
 
 Start the application `npm start`
 
 Start nodemon for the application `npm run dev`
 
 Run the tests `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
